@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>debug</title>
+    <style type="text/css">
+    /*body {*/
+    /*margin: 10px;*/
+    /*}*/
+    </style>
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" />
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/socket.io/socket.io.js"></script>
+    <style type="text/css" media="screen">
+    
+    .instructions{
+        padding: 30px;
+        border-radius: 10px;
+        background: rgba(111,111,111,0.5);
+        margin-top: 10px;
+    }   
+    .console-cont{
+         padding: 30px;
+        border-radius: 10px;
+        background: rgba(200,200,200,0.5);
+        max-height: 500px;
+        overflow: hidden;
+    }
+
+    .errer {
+        color: red;
+    }
+    </style>
+
+    <script type="text/javascript">
+    $(function(){
+        $(".del").click(function(){
+            $(".console-cont").html("");
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+            <h1 class="text-center">测试</h1>
+            <div class="instructions">
+               <h3 class="instructions-title">说明：<h3>
+                <h4>在您的代码加在 &lt;script src="http://nophp.com/danconsole/debug.php?debug=123"&gt;&lt;/script&gt;  </h4>
+                <h4>参数debug根据为您自己想的要参数，访问：http://nophp.com/danconsole/index.html?debug=您的参数值<h4>
+            </div>
+         <h3 class="title">
+             调试内容显示: <span class="del btn btn-default">清空显示</span>
+        </h3>
+        <div class="console-cont">
+        </div>
+    </div>
+</body>
+
+</html>
